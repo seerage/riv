@@ -1,0 +1,48 @@
+@import config
+
+.container
+  box-sizing: content-box
+  max-width: 1170px
+  padding-left: 15px
+  padding-right: 15px
+  margin: auto
+
+.btn
+  width: 226px
+  height: 53px
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #ffffff
+  font-weight: 500
+  font-size: 17px
+  box-shadow: 4px 4px 40px rgba(28, 183, 99, 0.2)
+  border-radius: 10px
+  background-color: $accent
+  transition: all .3s ease
+  &:hover
+    background-color: darken($accent, 3%)
+    color: #ffffff
+    text-decoration: none
+
+.img-responsive
+  width: auto
+  height: 100%
+
+@include media-breakpoint-down(lg)
+  .container
+    max-width: 960px
+
+@include media-breakpoint-down(md)
+  .container
+    max-width: 720px
+
+@include media-breakpoint-down(sm) 
+  .container
+    max-width: 540px
+
+@include media-breakpoint-down(xs) 
+  .container
+    max-width: 100%
+
+@import parts/main-screen
