@@ -1,0 +1,70 @@
+.our-products
+    background: #EDF4F8
+    padding: 100px 0
+
+    .title
+        position: relative
+        color: $accent
+        font-size: 40px
+        font-weight: 600
+        margin-left: 90px
+        &:before
+            content: ''
+            position: absolute
+            top: 32px
+            left: -90px
+            width: 67px
+            border-top: 2px solid $accent
+            
+    .subtitle
+        font-size: 30px
+        font-weight: 600
+        line-height: 36px
+        margin-top: 12px
+        margin-left: 90px
+
+    .cards__wrapper
+        margin-top: 45px
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+
+    .card
+        min-width: 48%
+        padding: 0 0 22px 26px
+        margin-top: 20px
+        &:nth-child(1)
+            background: #ffffff url('../../images/dest/card-1.png') right center/contain no-repeat
+        &:nth-child(2)
+            background: #ffffff url('../../images/dest/card-2.png') right center/contain no-repeat
+        &:nth-child(3)
+            background: #ffffff url('../../images/dest/card-3.png') right center/contain no-repeat
+        &:nth-child(4)
+            background: #ffffff url('../../images/dest/card-4.png') right center/contain no-repeat
+        &:nth-child(5)
+            background: #ffffff url('../../images/dest/card-5.png') right center/contain no-repeat
+        &:nth-child(6)
+            background: #ffffff url('../../images/dest/card-6.png') right center/contain no-repeat
+
+        &__product
+            margin-top: 120px
+            font-family: $montserrat
+            font-size: 17px
+            font-weight: 500
+            line-height: 1.4
+            margin-bottom: 15px
+        &__btn
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 190px
+            height: 43px
+            background: $accent
+            border: none
+            box-shadow: 4px 4px 4px rgba(28, 183, 99, 0.2)
+            border-radius: 10px
+            color: #fff
+            font-weight: 500
+            font-size: 17px
+            line-height: 20px
+            margin-top: 15px

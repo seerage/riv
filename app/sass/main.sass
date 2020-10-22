@@ -21,6 +21,9 @@
   background-color: $accent
   transition: all .3s ease
   border: none
+  &_small
+    width: 188px
+    height: 43px
   &:hover
     background-color: darken($accent, 3%)
     color: #ffffff
@@ -56,6 +59,7 @@
       top: 29px
   &__subtitle
     font-size: 30px
+    line-height: 1.4
 
 .success
   display: none
@@ -132,3 +136,4 @@
 @import parts/main-screen
 @import parts/about
 @import parts/delivery
+@import parts/our-products
