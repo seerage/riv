@@ -2,27 +2,6 @@
     background: #EDF4F8
     padding: 100px 0
 
-    .title
-        position: relative
-        color: $accent
-        font-size: 40px
-        font-weight: 600
-        margin-left: 90px
-        &:before
-            content: ''
-            position: absolute
-            top: 32px
-            left: -90px
-            width: 67px
-            border-top: 2px solid $accent
-            
-    .subtitle
-        font-size: 30px
-        font-weight: 600
-        line-height: 36px
-        margin-top: 12px
-        margin-left: 90px
-
     .cards__wrapper
         margin-top: 45px
         display: flex
@@ -30,9 +9,10 @@
         flex-wrap: wrap
 
     .card
+        position: relative
         min-width: 48%
-        padding: 0 0 22px 26px
         margin-top: 20px
+        height: 220px
         &:nth-child(1)
             background: #ffffff url('../../images/dest/card-1.png') right center/contain no-repeat
         &:nth-child(2)
@@ -45,9 +25,13 @@
             background: #ffffff url('../../images/dest/card-5.png') right center/contain no-repeat
         &:nth-child(6)
             background: #ffffff url('../../images/dest/card-6.png') right center/contain no-repeat
-
+        
+        &__wrapper
+            position: absolute
+            left: 26px
+            bottom: 22px
+            width: 60%
         &__product
-            margin-top: 120px
             font-family: $montserrat
             font-size: 17px
             font-weight: 500
@@ -68,3 +52,53 @@
             font-size: 17px
             line-height: 20px
             margin-top: 15px
+
+@include media-breakpoint-down(lg)
+    .our-products
+        padding: 70px 0
+        
+        .cards__wrapper
+            margin-top: 35px
+        
+        .card
+            min-width: 49%
+            padding: 0 0 17px 12px
+            margin-top: 10px             
+            &__product
+                max-width: 70%
+
+@include media-breakpoint-down(md)
+    .our-products
+        .card
+            height: 165px
+            &:nth-child(n)
+                background-position-x: 150%
+
+@include media-breakpoint-down(sm)
+    .our-products
+        padding: 50px 0 75px 0
+        .cards__wrapper
+            margin-top: 45px
+        .card
+            width: 100%
+            height: 138px 
+            &:nth-child(n)
+                background-position-x: 100%
+
+@include media-breakpoint-down(xs)
+    .our-products
+        padding: 50px 0 75px 0
+        .cards__wrapper
+            margin-top: 45px
+        .card
+            width: 100%
+            height: 138px  
+            &:nth-child(n)
+                background-position-x: 120%
+            &__wrapper
+                width: 60%
+                left: 12px
+                bottom: 15px
+            &__product
+                max-width: 90%
+                line-height: 1.1
