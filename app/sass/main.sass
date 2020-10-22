@@ -20,6 +20,7 @@
   border-radius: 10px
   background-color: $accent
   transition: all .3s ease
+  border: none
   &:hover
     background-color: darken($accent, 3%)
     color: #ffffff
@@ -29,6 +30,69 @@
   width: auto
   height: 100%
 
+.flex-box
+  display: flex
+  &_spacebtw
+    justify-content: space-between
+
+.section-heading
+  margin-bottom: 15px
+  &__title
+    position: relative
+    font-size: 40px
+    font-weight: 600
+    color: $accent
+    margin-bottom: 0
+    line-height: 1.4
+    &::before
+      content: ''
+      position: absolute
+      width: 60px
+      height: 2px
+      background-color: $accent
+      left: -85px
+      top: 50%
+      margin-top: -1px
+  &__subtitle
+    font-size: 30px
+
+.success
+  display: none
+
+.input-block
+  &__input
+    display: block
+    width: 100%
+
+.remodal
+  width: 330px
+  padding: 20px 25px
+  text-align: center
+
+.form
+  &__heading
+    font-size: 21px
+    font-weight: 500
+    margin: 0
+    margin-bottom: 25px
+    color: $accent
+  &__text
+    font-family: $montserrat
+    font-size: 14px
+    font-weight: 300
+    margin-top: 10px
+
+.input-block
+  &__input
+    box-shadow: 0px 0px 15px rgba(181, 181, 181, 0.3)
+    background-color: #ffffff
+    padding: 10px 16px
+    margin-bottom: 25px
+    border: none
+    font-weight: 300
+  &__btn
+    margin: auto
+
 @include media-breakpoint-down(lg)
   .container
     max-width: 960px
@@ -37,12 +101,32 @@
   .container
     max-width: 720px
 
+  .section-heading
+    margin-bottom: 0
+    &__title
+      font-size: 29px
+      &::before
+        width: 45px
+        left: -60px
+    &__subtitle
+      font-size: 25px
+
 @include media-breakpoint-down(sm) 
   .container
     max-width: 540px
+
+  .flex-box
+    display: block
 
 @include media-breakpoint-down(xs) 
   .container
     max-width: 100%
 
+  .section-heading
+    &__title
+      &::before
+        width: 30px
+        left: -40px
+
 @import parts/main-screen
+@import parts/about
