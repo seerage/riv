@@ -1,0 +1,116 @@
+.about
+  &__content
+    width: 540px
+  &__wrapper
+    padding-top: 180px  
+    margin-top: -40px
+    border-left: 0.5px solid rgba(0, 0, 0, 0.1)
+    border-right: 0.5px solid rgba(0, 0, 0, 0.1)
+
+.text-block
+  font-weight: 300
+  margin-bottom: 35px
+
+.double-image
+  &__item
+    &_custom
+      position: relative
+      z-index: 2
+      margin-right: 60px
+      top: -90px
+      &:before
+        content: ''
+        position: absolute
+        z-index: -1
+        background-color: $accent
+        width: 90%
+        height: 100%
+        right: -15px
+        top: 30px
+      &:after
+        content: 'РИВ'
+        position: absolute
+        transform: rotate(-90deg)
+        left: -82px
+        bottom: 54px
+        font-family: $montserrat
+        font-weight: 600
+        font-size: 100px
+        line-height: 1
+        color: #ffffff
+  &__img
+    &_small
+      display: none
+
+@include media-breakpoint-down(lg)
+  .double-image
+    margin-top: 60px
+    &__item
+      height: 400px
+      &_custom
+        margin-right: 40px
+
+  .about
+    &__content
+      width: 450px
+      padding-right: 15px
+
+@include media-breakpoint-down(md)
+  .double-image
+    margin-right: 30px
+    &__item
+      height: 290px
+
+  .text-block
+    font-size: 14px
+    line-height: 1.5
+
+  .about
+    &__content
+      width: 360px
+    &__wrapper
+      border: none
+      padding-top: 120px
+
+@include media-breakpoint-down(sm) 
+  .double-image
+    display: flex
+    justify-content: center  
+    margin-right: 0
+    &__img
+      &_large
+        display: none
+      &_small
+        display: block
+    &__item
+      &_custom
+        top: -70px
+        &::after
+          font-size: 50px
+          left: -38px
+          bottom: 46px
+        &::before
+          height: 95%
+
+  .about
+    &__content
+      margin-top: 40px
+      width: 100%
+      padding-left: 40px
+      .btn
+        display: none
+    &__wrapper
+      padding-top: 70px
+
+@include media-breakpoint-down(xs) 
+  .double-image
+    &__item
+      min-width: 0
+      margin-right: 20px
+      height: auto
+      &::before
+        right: -9px
+        height: 78%
+      img
+        width: 100%
+        height: auto
