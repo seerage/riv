@@ -29,5 +29,74 @@
     margin: 0
   &__path
     position: absolute
-    right: -80px  
+    right: -73px  
     top: 30px
+
+@include media-breakpoint-down(lg)
+  .delivery-card-block
+    position: relative
+    padding-bottom: 210px
+    &__item
+      &_absolute
+        position: absolute
+        right: 0
+        bottom: 0
+      &_first
+        .delivery-card-block__path
+          right: -54%
+      &_second
+        .delivery-card-block__path
+          right: 125px
+          top: 135px
+          transform: rotate(90deg)
+
+@include media-breakpoint-down(md)
+  .delivery-card-block
+    padding-bottom: 160px
+    &__item
+      width: 320px
+      &_first
+        .delivery-card-block__path
+          right: -65px
+      &_second
+        .delivery-card-block__path
+          top: 112px
+    &__text
+      font-size: 15px
+
+@include media-breakpoint-down(sm) 
+  .delivery-card-block
+    padding-bottom: 0
+    justify-content: center
+    &__item
+      margin-bottom: 75px
+      &_absolute
+        position: inherit  
+        margin-bottom: 0
+      &_first
+        .delivery-card-block__path
+          right: 125px
+          top: 115px
+          transform: rotate(90deg)
+
+  .info-text
+    width: 100%
+    text-align: center
+    br
+      display: none
+
+  .delivery
+    padding: 40px 0
+
+@include media-breakpoint-down(xs) 
+  .delivery-card-block
+    &__item
+      width: 100%
+    &__path
+      right: 50% !important
+      margin-right: -22.5px
+
+  .info-text
+    text-align: left
+    margin-bottom: 15px
+ 
