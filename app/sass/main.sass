@@ -21,6 +21,9 @@
   background-color: $accent
   transition: all .3s ease
   border: none
+  &_small
+    width: 188px
+    height: 43px
   &:hover
     background-color: darken($accent, 3%)
     color: #ffffff
@@ -37,6 +40,8 @@
 
 .section-heading
   margin-bottom: 15px
+  &_indent
+    padding-left: 85px
   &__title
     position: relative
     font-size: 40px
@@ -51,10 +56,10 @@
       height: 2px
       background-color: $accent
       left: -85px
-      top: 50%
-      margin-top: -1px
+      top: 29px
   &__subtitle
     font-size: 30px
+    line-height: 1.4
 
 .success
   display: none
@@ -108,6 +113,7 @@
       &::before
         width: 45px
         left: -60px
+        top: 20px
     &__subtitle
       font-size: 25px
 
@@ -117,6 +123,10 @@
 
   .flex-box
     display: block
+
+  .section-heading
+    &_indent
+      padding-left: 64px
 
 @include media-breakpoint-down(xs) 
   .container
@@ -130,4 +140,5 @@
 
 @import parts/main-screen
 @import parts/about
+@import parts/delivery
 @import parts/our-products
