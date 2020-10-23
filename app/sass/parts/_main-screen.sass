@@ -24,6 +24,8 @@
 .navigation
   display: flex
   align-items: center
+  &_block
+   flex-direction: column
   &__logo
     display: block
   &__menu
@@ -32,14 +34,20 @@
     padding: 0
     margin: 0
     margin-left: 90px
+    &_no-mrg
+      margin: 0
+      margin-top: 15px
   &__link
     font-size: 15px
     margin-right: 30px
     color: $textcolor
     transition: color .3s ease
+    &_white
+      color: #ffffff
     &:hover
       color: $accent
       text-decoration: none
+
 
 .phone
   display: flex
@@ -54,6 +62,11 @@
     font-size: 17px
     font-weight: 600
     color: $textcolor
+    &_white
+      color: #ffffff
+      font-size: 14px
+      &:hover
+        color: #ffffff !important
     &:hover
       color: $textcolor
       text-decoration: none
@@ -81,9 +94,14 @@
   align-items: center
   &__link
     margin-right: 23px
+    &_left
+      margin: 0
+      margin-left: 23px
   &__icon
     &:hover path
       fill: darken($accent, 3%)
+    &_white path
+      fill: #ffffff
 
 .numbers
   position: relative
@@ -213,6 +231,8 @@
   .navigation
     &__menu
       display: none
+      &_no-mrg
+        display: flex
 
   .offer
     position: relative

@@ -1,0 +1,27 @@
+.footer
+  background-color: #0a1a32
+  padding: 50px 0
+  color: #ffffff
+  font-family: $montserrat
+  &__mobile
+    display: none
+  &__main
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+
+.rights
+  margin-top: 20px
+  font-size: 14px
+
+.footer-text
+  font-size: 14px
+  margin-bottom: 5px
+
+@include media-breakpoint-down(md)
+  .footer
+    &__main
+      display: none
+    &__mobile
+      display: block
